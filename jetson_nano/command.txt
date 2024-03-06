@@ -1,0 +1,1 @@
+docker run -d --rm --runtime nvidia --net=host --ipc=host -v /tmp/argus_socket:/tmp/argus_socket -v ./recordings/:/tmp/recordings --privileged --device /dev/video0:/dev/video0 -p 8000:8000 --env-file app.env --name livestreamApp akmyat/edge_general_purpose_sensing:livestream_app_jetson_nano
